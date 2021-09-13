@@ -1,0 +1,3 @@
+# SeimaShop
+Librerie da installare:
+
