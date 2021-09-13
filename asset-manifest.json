@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/SeimaShop/static/css/main.d3227691.chunk.css",
-    "main.js": "/SeimaShop/static/js/main.b69a464e.chunk.js",
-    "main.js.map": "/SeimaShop/static/js/main.b69a464e.chunk.js.map",
+    "main.js": "/SeimaShop/static/js/main.fd133266.chunk.js",
+    "main.js.map": "/SeimaShop/static/js/main.fd133266.chunk.js.map",
     "runtime-main.js": "/SeimaShop/static/js/runtime-main.a37def7a.js",
     "runtime-main.js.map": "/SeimaShop/static/js/runtime-main.a37def7a.js.map",
     "static/css/2.148e767b.chunk.css": "/SeimaShop/static/css/2.148e767b.chunk.css",
@@ -19,6 +19,6 @@
     "static/css/2.148e767b.chunk.css",
     "static/js/2.2d5b0b3d.chunk.js",
     "static/css/main.d3227691.chunk.css",
-    "static/js/main.b69a464e.chunk.js"
+    "static/js/main.fd133266.chunk.js"
   ]
 }
