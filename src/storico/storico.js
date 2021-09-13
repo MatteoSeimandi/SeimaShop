@@ -19,10 +19,12 @@ const Storico = ({registro, setRegistro ,setScon, setFat}) => {
 	}, [reg]);
 
 	let deleteStorico = () => {
-		setRegistro([]);
-		setScon(1);
-		setFat(1);
-		alert('Storico Cancellato');
+		if (window.confirm('Vuoi cancellare tutto lo storico?')) {
+			setRegistro([]);
+			setScon(1);
+			setFat(1);
+			alert('Storico Cancellato');
+		}
 	}
 
 	return(
@@ -32,32 +34,30 @@ const Storico = ({registro, setRegistro ,setScon, setFat}) => {
 					<p className='fs-1 mt-2'> Storico </p>
 				</Col>
 			</Row>
-			<Row xxl={10} className='d-flex justify-content-center overflow-auto mb-3' style={{height: '500px'}} >
-				<Col xxl={5}  className='text-center bg-primary'>
+			<Row xxl={10} className='d-flex justify-content-center overflow-auto mb-3' style={{height: '600px'}} >
+				<Col xxl={5}  className='text-center bg-white p-0 rounded'>
 					<ListStorico registro={reg}/>
 				</Col>
 			</Row>
-			<Row>
-				<Col className='d-flex justify-content-end px-0' xxl={5} xs={4}>
-					<Button size='lg' variant='outline-danger' onClick={deleteStorico} disabled={disable}>
+			<Row className='mb-3'>
+				<Col className='d-flex justify-content-end px-0 mb-2' xxl={5} xs={4}>
+					<Button size='lg' variant='outline-danger' className='px-md-3 p-2' onClick={deleteStorico} disabled={disable}>
 						<i className="bi bi-bag-dash"></i>
 						{'\t'}
 						Cancella
 					</Button>
 				</Col>
-				<Col className='d-flex justify-content-center px-0' xxl={2} xs={4}>
-					<Button size='lg' variant='outline-primary' disabled={disable}>
+				<Col className='d-flex justify-content-center px-0 mb-2' xxl={2} xs={4}>
+					<Button size='lg' variant='outline-success' className='px-md-3 p-2' disabled={disable}>
 						<i className="bi bi-download"></i>
 						{'\t'}
 						<PdfDownload data={reg} testo='Stampa' />
 					</Button >
 				</Col>
-				<Col className='d-flex justify-content-start px-0' xxl={5} xs={4}>
+				<Col className='d-flex justify-content-start px-0 mb-2' xxl={5} xs={4}>
 					<FormEmail data={reg} disable={disable} testo='Invia' />
 				</Col>
 			</Row>
-
-
 		</Container>
 	)
 }

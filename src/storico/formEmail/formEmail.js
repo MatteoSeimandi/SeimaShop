@@ -29,7 +29,7 @@ const FormEmail = ({data, disable, testo}) => {
 
 	return(
 		<>
-			<Button size='lg' variant='outline-primary' onClick={() => setShow(true)} disabled={stato} >
+			<Button size='lg' variant='outline-primary' onClick={() => setShow(true)} disabled={stato} className='px-md-3' >
 				<i className="bi bi-share"></i>
 				{'\t'}
 				{testo}

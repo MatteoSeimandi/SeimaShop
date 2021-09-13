@@ -13,16 +13,16 @@ const ListStorico = ({registro}) => {
 		<>
 		{
 			data.length !== 0 ?
-				<ListGroup variant='flush' className='bg-info'>
-					<Accordion>
+				<ListGroup variant='flush' >
+					<Accordion flush>
 						{
 							data.map( (item, index) => {
 								return <ListGroup.Item eventKey={index} variant='info'>
-											<Accordion.Item eventKey={index} className='bg-info'>
+											<Accordion.Item eventKey={index}>
 												<Accordion.Header>
 													<p className='fs-4 m-0'>{item.tipo} #{item.id} </p>
 												</Accordion.Header>
-												<Accordion.Body className='text-start bg-info'>
+												<Accordion.Body className='text-start bg-white'>
 													<p className='text-dark fs-4 m-1'> Data: { item.data } </p>
 													<p className='text-dark fs-4 m-1'> Ora: { item.ora } </p>
 													<p className='text-dark fs-4 m-1'> Totale: { item.totale } </p>
@@ -32,14 +32,14 @@ const ListStorico = ({registro}) => {
 															item.spesa.map( (oggetto, indice) => {
 																return <li key={indice} className='text-dark fs-5 m-1'> {oggetto.nome} x {oggetto.quantita} </li>
 															})
-														}
+													}
 													</ol>
 													<Button size='lg' variant='outline-success' className='mx-3'>
 														<i className="bi bi-download"></i>
 														{'\t'}
 														<PdfDownload data={[item]} testo='Stampa' />
 													</Button>
-													<FormEmail data={[item]} disable={false} testo='Invia' />
+														<FormEmail data={[item]} disable={false} testo='Invia' />
 												</Accordion.Body>
 											</Accordion.Item>
 										</ListGroup.Item>

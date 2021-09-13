@@ -211,61 +211,61 @@ const Shop = ({tipo, setReg, nScon, setScon ,nFat, setFat}) => {
 								</Figure>
 							</Col>
 						</Row>
-						<Row>
-							<Col className=' d-flex justify-content-end'>
+						<Row className='mb-2'>
+							<Col className='d-flex justify-content-end'>
 								<Button variant='outline-primary' disabled={btnPlus} onClick={increase}>
 									<i className="bi bi-caret-up fs-5"></i>
 								</Button>
 							</Col>
-							<Col>
-								<p className='fs-3 p-0 px-2 text-center m-0 bg-white rounded-pill'>
+							<Col className='d-flex justify-content-center'>
+								<p className='fs-3 p-0 px-2 text-center m-0 bg-white rounded-pill w-50'>
 									{quantita}
 								</p>
 							</Col>
-							<Col className=' d-flex justify-content-start'>
+							<Col className='d-flex justify-content-start'>
 								<Button variant='outline-primary' disabled={btnMinus} onClick={decrease} >
-								<i className="bi bi-caret-down fs-5"></i>
+									<i className="bi bi-caret-down fs-5"></i>
 								</Button>
 							</Col>
 						</Row>
-						<Row>
-							<Col>
-								<p className='fs-3 text-center m-0 bg-white rounded-pill'>
+						<Row className='my-2'>
+							<Col className='d-flex justify-content-center'>
+								<p className='fs-3 px-2 text-center m-0 bg-white rounded-pill w-50'>
 									€ {prezzo}
 								</p>
 							</Col>
-							<Col>
-								<p className='fs-3 text-center m-0 bg-white rounded-pill'>
+							<Col className='d-flex justify-content-center'>
+								<p className='fs-3 px-2 text-center m-0 bg-white rounded-pill w-50'>
 									€ {tot}
 								</p>
 							</Col>
 						</Row>
 						<Row>
 							<Col className='d-flex justify-content-center m-1'>
-								<Button size='lg' variant='outline-primary' onClick={addItem}>
+								<Button size='lg' variant='outline-primary' className='p-2 p-md-2' onClick={addItem}>
 									<i className="bi bi-check-lg fs-6"></i>
 									{'\t'}
 									AGGIUNGI
 								</Button>
 							</Col>
 							<Col className='d-flex justify-content-center m-1'>
-								<Button size='lg' variant='outline-danger' onClick={deleteItem} disabled={disable}>
+								<Button size='lg' variant='outline-danger' className='p-2 p-md-2' onClick={deleteItem} disabled={disable}>
 									<i className="bi bi-x-lg fs-6"></i>
 									{'\t'}
 									ELIMINA
 								</Button>
 							</Col>
 						</Row>
-						<Row>
+						<Row className='mb-2'>
 							<Col className='d-flex justify-content-center m-1'>
-								<Button size='lg' variant='outline-success' onClick={update} disabled={disable}>
+								<Button size='lg' variant='outline-success' className='p-2 p-md-2'  onClick={update} disabled={disable}>
 									<i className="bi bi-bag-check"></i>
 									{'\t'}
 									VALIDA
 								</Button>
 							</Col>
 							<Col className='d-flex justify-content-center m-1'>
-								<Button size='lg' variant='outline-danger' onClick={deleteAll} disabled={disable}>
+								<Button size='lg' variant='outline-danger' className='p-2 p-md-2' onClick={deleteAll} disabled={disable}>
 									<i className="bi bi-bag-dash"></i>
 									{'\t'}
 									ANNULLA
