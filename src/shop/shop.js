@@ -235,7 +235,7 @@ const Shop = ({tipo, setReg, nScon, setScon ,nFat, setFat}) => {
 								</p>
 							</Col>
 							<Col className='d-flex justify-content-center'>
-								<p className='fs-3 px-2 text-center m-0 bg-white rounded-pill w-50'>
+								<p className='fs-3 px-2 text-center m-0 bg-white rounded-pill w-75'>
 									€ {tot}
 								</p>
 							</Col>

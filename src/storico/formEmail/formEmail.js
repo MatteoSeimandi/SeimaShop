@@ -21,9 +21,9 @@ const FormEmail = ({data, disable, testo}) => {
 
 		emailjs.send('service_gmail', 'template_tpsi', { message: mex, email: email} ,'user_fLIjlW3q18H0Pq6nKCgXz')
 		.then( (result) => {
-			console.log(result.text);
+			alert('Email Inviata con successo!');
 		}, (error) => {
-			console.log(error.text);
+			alert('Errore imprevisto :(');
 		});
 	}
 
@@ -42,7 +42,7 @@ const FormEmail = ({data, disable, testo}) => {
    	   >
 				<Modal.Header closeButton>
 					<Modal.Title id="example-modal-sizes-title-lg">
-						Large Modal
+						Email form
 					</Modal.Title>
 				</Modal.Header>
 				<Modal.Body>
